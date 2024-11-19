@@ -90,7 +90,9 @@ public class AuthController {
     }
 
     @PostMapping("/login/menu")
-    public String submitLogin(HttpServletRequest request, Model model, @ModelAttribute("loginModel") LoginDTO loginDTO, HttpServletResponse httpResponse){
+    public String submitLogin(HttpServletRequest request,
+                              Model model, @ModelAttribute("loginModel") LoginDTO loginDTO,
+                              HttpServletResponse httpResponse){
         RestTemplate restTemplate = new RestTemplate();
         String apiUrlLogin = "http://localhost:8080/api/auth/v1/login";  // Replace with your actual API URL
         String apiUrlAkses = "http://localhost:8080/api/akses/v1/listAkses";

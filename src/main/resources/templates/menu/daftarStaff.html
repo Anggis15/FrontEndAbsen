@@ -9,11 +9,11 @@
 <body class="bg-light">
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Form Input Supervisor</h2>
+    <h2 class="text-center mb-4">Form Input Staff</h2>
 
     <div class="card shadow">
         <div class="card-header text-white d-flex justify-content-center bg-success">
-            <h5 class="mb-0">Registrasi Supervisor</h5>
+            <h5 class="mb-0">Registrasi Staff</h5>
         </div>
         <p class="text-success" th:if="${success}">
             <span th:text="${success}"></span>
@@ -22,7 +22,7 @@
             <span th:text="${failedReg}"></span>
         </p>
         <div class="card-body">
-            <form action="#" th:action="@{/page/daftarSupervisior}"  th:object="${regisEmployee}" method="post">
+            <form action="#" th:action="@{/page/daftar-staff}"  th:object="${regisEmployee}" method="post">
                 <div class="mb-3">
                     <label for="namaKaryawan" class="form-label">Email</label>
                     <input type="text" class="form-control" id="email" th:field="*{email}" name="email" placeholder="Masukkan email Karyawan" required>

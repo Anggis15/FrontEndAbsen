@@ -43,8 +43,6 @@ public class AbsenController {
     public String approveAbsen(@PathVariable("id") Long id, Model model, HttpServletRequest request){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         ResponseEntity<Map<String,Object>> responseApprove = externalApiService.getAbsenById(id);
-        System.out.println(responseApprove);
-//        AbsenController absenController
         String url = "http://localhost:8080/api/absen/v1/absenApprove/0/desc/checkIn?size=10";
         RestTemplate restTemplate = new RestTemplate();
         Cookie[] cookies = request.getCookies();
